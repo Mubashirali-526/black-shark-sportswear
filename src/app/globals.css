@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0b0b0b;
+  --color-ink-soft: #141414;
+  --color-paper: #ffffff;
+  --color-accent: #c8a24a;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --nav-h: 76px;
+}
+
+@layer base {
+  * {
+    border-color: rgba(0, 0, 0, 0.08);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #ffffff;
+  color: #0b0b0b;
+  font-feature-settings: "ss01", "cv01";
+}
+
+::selection {
+  background-color: #0b0b0b;
+  color: #ffffff;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f2f2f2;
+}
+::-webkit-scrollbar-thumb {
+  background: #0b0b0b;
+  border-radius: 999px;
+  border: 2px solid #f2f2f2;
+}
+
+.container-x {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 1280px;
+  padding-inline: 1.25rem;
+}
+@media (min-width: 768px) {
+  .container-x {
+    padding-inline: 2rem;
+  }
+}
+
+/* Marquee for scrolling hero / ticker */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+.animate-marquee-fast {
+  animation: marquee 18s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.12) translate(-1.5%, -1.5%);
+  }
+}
+.animate-kenburns {
+  animation: kenburns 7s ease-out forwards;
+}
+
+/* Slow drifting dot-mesh, used behind dark hero sections for a subtle "alive"
+   background without any JS — pure CSS background-position animation. */
+@keyframes mesh-drift {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 24px 24px;
+  }
+}
+.animate-mesh-drift {
+  animation: mesh-drift 12s ease-in-out infinite;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.gradient-fade-b {
+  -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+}
