@@ -144,7 +144,7 @@ export default async function CategoryDetailPage({
                 Products coming soon
               </h2>
               <p className="mx-auto mt-2 max-w-sm text-sm leading-relaxed text-white/60">
-                We're adding detailed listings for {category.name}. Request a
+                We&apos;re adding detailed listings for {category.name}. Request a
                 quote and our team will send you the full spec sheet.
               </p>
               <ButtonLink href="/quote" variant="accent" size="lg" className="mt-6">

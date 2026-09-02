@@ -71,7 +71,7 @@ export default function AboutPage() {
             <div className="mt-6 space-y-4 text-sm leading-relaxed text-ink/65 sm:text-base">
               <p>
                 Black Shark Sportswear was founded in Sialkot, Pakistan — a city
-                that has quietly outfitted the world's biggest sporting events for
+                that has quietly outfitted the world&apos;s biggest sporting events for
                 decades and earned its reputation as the sports manufacturing
                 capital of the world. We build on that heritage every day.
               </p>

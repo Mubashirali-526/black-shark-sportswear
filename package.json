@@ -1,10 +1,15 @@
 {
-  "name": "nextjs-postgresql-template",
+  "name": "black-shark-sportswear",
   "private": true,
+  "main": "server.js",
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "node server.js",
+    "start:next": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "db:seed": "tsx src/db/seed.ts"
