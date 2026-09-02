@@ -16,5 +16,8 @@ next-env.d.ts
 # claude code local settings
 .claude/
 
+# local deployment archives (too large for GitHub, never needed in the repo)
+*.zip
+
 # misc
 .DS_Store
